@@ -1,0 +1,80 @@
+.stats-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md);
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.stats-bar__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.stats-bar__label {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.stats-bar__value {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+}
+
+.stats-bar__value--warning {
+  color: var(--error);
+}
+
+.stats-bar__timer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.stats-bar__pause-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.stats-bar__pause-btn:hover {
+  background-color: var(--accent);
+}
+
+.stats-bar__pause-btn svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--text-primary);
+}
+
+.stats-bar__pause-btn:hover svg {
+  fill: var(--bg-secondary);
+}
+
+@media (max-width: 480px) {
+  .stats-bar {
+    padding: var(--spacing-sm);
+  }
+
+  .stats-bar__value {
+    font-size: var(--font-size-lg);
+  }
+
+  .stats-bar__label {
+    font-size: 9px;
+  }
+}

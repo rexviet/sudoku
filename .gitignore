@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+.env
+.env.local
+test-results/
+playwright-report/
+playwright/.cache/
+.vite/
+.antigravity
+INSTRUCTIONS_FOR_AGENT.md

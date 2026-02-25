@@ -1,0 +1,61 @@
+.number-pad {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: var(--spacing-sm);
+}
+
+.number-pad__button {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+  min-height: 44px;
+}
+
+.number-pad__button:hover:not(:disabled) {
+  background-color: var(--accent);
+  color: var(--bg-secondary);
+}
+
+.number-pad__button:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.number-pad__button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.number-pad__count {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  font-size: 8px;
+  color: var(--text-secondary);
+}
+
+.number-pad__button:hover:not(:disabled) .number-pad__count {
+  color: var(--bg-secondary);
+}
+
+@media (max-width: 480px) {
+  .number-pad {
+    gap: 3px;
+  }
+
+  .number-pad__button {
+    font-size: var(--font-size-md);
+    min-height: 36px;
+  }
+
+  .number-pad__count {
+    font-size: 6px;
+  }
+}

@@ -1,0 +1,13 @@
+version: "2026.1"
+name: "The Vault 33 Team"
+
+# Import các thành phần từ thư mục cấu hình
+include:
+  - .antigravity/bus.yaml
+  - .antigravity/workflow_control.yaml
+  - .antigravity/agents/*.yaml
+
+# Thiết lập luồng chạy (Workflow)
+orchestration:
+  mode: "event-driven"
+  initial_event: "USER_START"
