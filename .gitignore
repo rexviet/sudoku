@@ -11,4 +11,3 @@ playwright/.cache/
 .antigravity
 INSTRUCTIONS_FOR_AGENT.md
 .firebase/
-src/services/firebase.js
